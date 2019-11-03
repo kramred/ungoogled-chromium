@@ -33,7 +33,7 @@
  #include "chrome/common/safe_browsing/download_file_types.pb.h"
  #include "chrome/common/safe_browsing/file_type_policies.h"
  #include "chrome/grit/chromium_strings.h"
-@@ -43,7 +40,6 @@
+@@ -43,7 +42,6 @@
  
  using base::TimeDelta;
  using download::DownloadItem;
