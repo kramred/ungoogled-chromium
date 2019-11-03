@@ -30,11 +30,9 @@
  #include "chrome/browser/download/offline_item_utils.h"
  #include "chrome/browser/profiles/profile.h"
 -#include "chrome/browser/safe_browsing/download_protection/download_feedback_service.h"
--#include "chrome/common/safe_browsing/download_file_types.pb.h"
--#include "chrome/common/safe_browsing/file_type_policies.h"
+ #include "chrome/common/safe_browsing/download_file_types.pb.h"
+ #include "chrome/common/safe_browsing/file_type_policies.h"
  #include "chrome/grit/chromium_strings.h"
- #include "chrome/grit/generated_resources.h"
- #include "components/download/public/common/download_danger_type.h"
 @@ -43,7 +40,6 @@
  
  using base::TimeDelta;
