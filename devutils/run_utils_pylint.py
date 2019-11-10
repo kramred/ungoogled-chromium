@@ -38,6 +38,7 @@ def main():
 
     ignore_prefixes = [
         ('third_party', ),
+        ('tests', ),
     ]
 
     sys.path.insert(1, str(Path(__file__).resolve().parent.parent / 'utils' / 'third_party'))
