@@ -29,6 +29,11 @@ _ENCODING = 'UTF-8'
 # pathlib.Path.match() paths to include in binary pruning
 PRUNING_INCLUDE_PATTERNS = [
     'components/domain_reliability/baked_in_configs/*',
+    # Removals for patches/core/ungoogled-chromium/remove-unused-preferences-fields.patch
+    'components/safe_browsing/common/safe_browsing_prefs.cc',
+    'components/safe_browsing/common/safe_browsing_prefs.h',
+    'components/signin/public/base/signin_pref_names.cc',
+    'components/signin/public/base/signin_pref_names.h',
 ]
 
 # pathlib.Path.match() paths to exclude from binary pruning
@@ -40,6 +45,7 @@ PRUNING_EXCLUDE_PATTERNS = [
     # TabRanker example preprocessor config
     # Details in chrome/browser/resource_coordinator/tab_ranker/README.md
     'chrome/browser/resource_coordinator/tab_ranker/example_preprocessor_config.pb',
+    'chrome/browser/resource_coordinator/tab_ranker/pairwise_preprocessor_config.pb',
     # Exclusions for DOM distiller (contains model data only)
     'components/dom_distiller/core/data/distillable_page_model_new.bin',
     'components/dom_distiller/core/data/long_page_model.bin',

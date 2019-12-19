@@ -10,7 +10,6 @@ core/inox-patchset/0015-disable-update-pings.patch
 core/inox-patchset/0017-disable-new-avatar-menu.patch
 core/inox-patchset/0021-disable-rlz.patch
 core/debian_buster/disable/unrar.patch
-core/debian_buster/disable/perfetto.patch
 core/iridium-browser/safe_browsing-disable-incident-reporting.patch
 core/iridium-browser/safe_browsing-disable-reporting-of-safebrowsing-over.patch
 core/iridium-browser/all-add-trk-prefixes-to-possibly-evil-connections.patch
@@ -34,9 +33,9 @@ core/ungoogled-chromium/use-local-devtools-files.patch
 core/ungoogled-chromium/disable-network-time-tracker.patch
 core/ungoogled-chromium/disable-mei-preload.patch
 core/ungoogled-chromium/fix-building-without-safebrowsing.patch
+core/ungoogled-chromium/remove-unused-preferences-fields.patch
 core/bromite/disable-fetching-field-trials.patch
 
-extra/inox-patchset/chromium-widevine.patch
 extra/inox-patchset/0006-modify-default-prefs.patch
 extra/inox-patchset/0008-restore-classic-ntp.patch
 extra/inox-patchset/0011-add-duckduckgo-search-engine.patch
@@ -47,6 +46,7 @@ extra/inox-patchset/0019-disable-battery-status-service.patch
 extra/debian_buster/gn/parallel.patch
 extra/debian_buster/fixes/ps-print.patch
 extra/debian_buster/fixes/connection-message.patch
+extra/debian_buster/fixes/widevine-enable-version-string.patch
 extra/debian_buster/disable/android.patch
 extra/debian_buster/disable/fuzzers.patch
 extra/debian_buster/disable/welcome-page.patch
