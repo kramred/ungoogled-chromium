@@ -1,13 +1,21 @@
 # Make popups go to tabs instead
 
---- a/content/renderer/render_view_impl.cc
-+++ b/content/renderer/render_view_impl.cc
-@@ -82,7 +82,7 @@ WindowOpenDisposition RenderViewImpl::Na
-     case blink::kWebNavigationPolicyNewWindow:
-       return WindowOpenDisposition::NEW_WINDOW;
-     case blink::kWebNavigationPolicyNewPopup:
--      return WindowOpenDisposition::NEW_POPUP;
-+      return WindowOpenDisposition::NEW_FOREGROUND_TAB;
-     default:
-       NOTREACHED() << "Unexpected WebNavigationPolicy";
-       return WindowOpenDisposition::IGNORE_ACTION;
+--- a/chrome/browser/ui/browser.cc
++++ b/chrome/browser/ui/browser.cc
+@@ -1648,16 +1648,7 @@
+                              const gfx::Rect& initial_rect,
+                              bool user_gesture,
+                              bool* was_blocked) {
+-#if defined(OS_MAC)
+-  // On the Mac, the convention is to turn popups into new tabs when in
+-  // fullscreen mode. Only worry about user-initiated fullscreen as showing a
+-  // popup in HTML5 fullscreen would have kicked the page out of fullscreen.
+-  if (disposition == WindowOpenDisposition::NEW_POPUP &&
+-      exclusive_access_manager_->fullscreen_controller()
+-          ->IsFullscreenForBrowser()) {
+     disposition = WindowOpenDisposition::NEW_FOREGROUND_TAB;
+-  }
+-#endif
+ 
+   // At this point the |new_contents| is beyond the popup blocker, but we use
+   // the same logic for determining if the popup tracker needs to be attached.
